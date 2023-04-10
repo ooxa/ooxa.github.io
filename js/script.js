@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
     $("#contact-form").submit(function(event) {
         event.preventDefault();
         var formData = {
@@ -20,6 +20,7 @@ $(document).ready(function() {
             error: function(xhr, textStatus, errorThrown) {
                 $('#error-message').removeClass('d-none');
                 $('#error-message').text("An error occurred. Please try again later.");
+                $('html, body').animate({ scrollTop: $('#error-message').offset().top }, 'slow');
             }
         });
     });
