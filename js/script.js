@@ -9,7 +9,8 @@ $(window).on('load', function() {
 
         $.ajax({
             type: "POST",
-            url: "https://ooxa.net/contact_test",
+            // url: "https://ooxa.net/contact_test",
+            url: "https://ooxa-site-contact-us-zrbwmmramq-uc.a.run.app",
             data: JSON.stringify(formData),
             contentType: "application/json",
             success: function(response) {
